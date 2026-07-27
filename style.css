@@ -1,79 +1,157 @@
-<!-- Birthday Gallery -->
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-<section class="gallery">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-<h2>📸 My Favourite Person ❤️</h2>
+body{
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    text-align:center;
+}
 
-<div class="gallery-box">
+section{
+    padding:70px 20px;
+}
 
-<img src="https://i.imgur.com/Lv5gP6M.jpeg">
+.hero h1{
+    font-size:55px;
+    color:#ff4da6;
+}
 
-<img src="https://i.imgur.com/Lv5gP6M.jpeg">
+.hero h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
 
-<img src="https://i.imgur.com/Lv5gP6M.jpeg">
+.date{
+    font-size:22px;
+    margin:20px 0;
+}
 
-</div>
+.hero img{
+    width:260px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #ff4da6;
+    box-shadow:0 0 25px #ff4da6;
+    margin:25px 0;
+}
 
-</section>
+.message,
+.letter p,
+.final p{
+    max-width:700px;
+    margin:auto;
+    line-height:35px;
+    font-size:20px;
+}
 
-<!-- Song Section -->
+button{
+    margin-top:25px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ff4da6;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
 
-<section class="song">
+button:hover{
+    transform:scale(1.08);
+    background:#ff1f8f;
+}
 
-<h2>🎵 Our Song ❤️</h2>
+.gallery h2,
+.song h2,
+.cake h2,
+.letter h2{
+    color:#ff66c4;
+    margin-bottom:25px;
+}
 
-<p>Click the button below and listen to our favourite song.</p>
+.gallery-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-<a href="https://youtu.be/MFf94YYSi_o?si=vDZ3kwS0S_qF4JWD" target="_blank">
+.gallery-box img{
+    width:220px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid #ff4da6;
+    box-shadow:0 0 20px #ff4da6;
+    transition:.5s;
+}
 
-<button>
+.gallery-box img:hover{
+    transform:scale(1.08);
+}
 
-▶ Play Our Song
+.cake-emoji{
+    font-size:120px;
+    animation:float 3s infinite;
+}
 
-</button>
+.final h1{
+    color:#ff66c4;
+    font-size:55px;
+    margin-bottom:20px;
+}
 
-</a>
+footer{
+    margin-top:50px;
+    padding:25px;
+    background:#111;
+    color:white;
+}
 
-</section>
+#loading{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
 
-<!-- Birthday Cake -->
+.loader{
+    width:80px;
+    height:80px;
+    border:8px solid white;
+    border-top:8px solid #ff4da6;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:20px 0;
+}
 
-<section class="cake">
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
 
-<h2>🎂 Make a Wish ❤️</h2>
-
-<div class="cake-emoji">
-
-🎂
-
-</div>
-
-<p>
-
-Happy Birthday Gunalan ❤️
-
-</p>
-
-</section>
-
-<!-- Final Message -->
-
-<section class="final">
-
-<h1>
-
-I Love You ❤️
-
-</h1>
-
-<p>
-
-No matter where life takes us...
-
-You will always be special to me.
-
-Happy Birthday My Love ❤️
-
-</p>
-
-</section>
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
