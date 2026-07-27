@@ -1,0 +1,112 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    overflow-x:hidden;
+    text-align:center;
+}
+
+/* Hero Section */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+.hero img{
+    width:250px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:5px solid #ff4da6;
+    box-shadow:0 0 30px #ff4da6;
+    animation:float 3s ease-in-out infinite;
+}
+
+h1{
+    margin-top:20px;
+    font-size:55px;
+    color:#ff66c4;
+    text-shadow:0 0 20px #ff66c4;
+}
+
+h2{
+    margin-top:10px;
+    color:#ffffff;
+    font-size:28px;
+}
+
+p{
+    margin-top:20px;
+    max-width:700px;
+    font-size:20px;
+    line-height:35px;
+    color:#f1f1f1;
+}
+
+button{
+    margin-top:35px;
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    border-radius:50px;
+    background:#ff4da6;
+    color:white;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 0 20px #ff4da6;
+}
+
+button:hover{
+    transform:scale(1.1);
+    background:white;
+    color:#ff4da6;
+}
+
+/* Floating Animation */
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Fade Animation */
+.fade{
+    animation:fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Footer */
+footer{
+    padding:30px;
+    color:#ccc;
+    font-size:18px;
+}
