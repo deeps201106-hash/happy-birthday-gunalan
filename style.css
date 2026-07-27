@@ -1,112 +1,79 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+<!-- Birthday Gallery -->
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+<section class="gallery">
 
-body{
-    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-    color:white;
-    overflow-x:hidden;
-    text-align:center;
-}
+<h2>📸 My Favourite Person ❤️</h2>
 
-/* Hero Section */
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    padding:20px;
-}
+<div class="gallery-box">
 
-.hero img{
-    width:250px;
-    height:320px;
-    object-fit:cover;
-    border-radius:20px;
-    border:5px solid #ff4da6;
-    box-shadow:0 0 30px #ff4da6;
-    animation:float 3s ease-in-out infinite;
-}
+<img src="https://i.imgur.com/Lv5gP6M.jpeg">
 
-h1{
-    margin-top:20px;
-    font-size:55px;
-    color:#ff66c4;
-    text-shadow:0 0 20px #ff66c4;
-}
+<img src="https://i.imgur.com/Lv5gP6M.jpeg">
 
-h2{
-    margin-top:10px;
-    color:#ffffff;
-    font-size:28px;
-}
+<img src="https://i.imgur.com/Lv5gP6M.jpeg">
 
-p{
-    margin-top:20px;
-    max-width:700px;
-    font-size:20px;
-    line-height:35px;
-    color:#f1f1f1;
-}
+</div>
 
-button{
-    margin-top:35px;
-    padding:15px 35px;
-    font-size:20px;
-    border:none;
-    border-radius:50px;
-    background:#ff4da6;
-    color:white;
-    cursor:pointer;
-    transition:.4s;
-    box-shadow:0 0 20px #ff4da6;
-}
+</section>
 
-button:hover{
-    transform:scale(1.1);
-    background:white;
-    color:#ff4da6;
-}
+<!-- Song Section -->
 
-/* Floating Animation */
-@keyframes float{
-    0%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(-20px);
-    }
-    100%{
-        transform:translateY(0px);
-    }
-}
+<section class="song">
 
-/* Fade Animation */
-.fade{
-    animation:fadeIn 2s;
-}
+<h2>🎵 Our Song ❤️</h2>
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+<p>Click the button below and listen to our favourite song.</p>
 
-/* Footer */
-footer{
-    padding:30px;
-    color:#ccc;
-    font-size:18px;
-}
+<a href="https://youtu.be/MFf94YYSi_o?si=vDZ3kwS0S_qF4JWD" target="_blank">
+
+<button>
+
+▶ Play Our Song
+
+</button>
+
+</a>
+
+</section>
+
+<!-- Birthday Cake -->
+
+<section class="cake">
+
+<h2>🎂 Make a Wish ❤️</h2>
+
+<div class="cake-emoji">
+
+🎂
+
+</div>
+
+<p>
+
+Happy Birthday Gunalan ❤️
+
+</p>
+
+</section>
+
+<!-- Final Message -->
+
+<section class="final">
+
+<h1>
+
+I Love You ❤️
+
+</h1>
+
+<p>
+
+No matter where life takes us...
+
+You will always be special to me.
+
+Happy Birthday My Love ❤️
+
+</p>
+
+</section>
