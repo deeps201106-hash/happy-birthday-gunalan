@@ -39,3 +39,26 @@ opacity:0;
 }
 }`;
 document.head.appendChild(style);
+// Welcome Message
+setTimeout(function () {
+    console.log("Happy Birthday Gunalan ❤️");
+}, 3000);
+
+// Auto Scroll Effect
+let sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 300;
+
+        if (top > offset) {
+            sec.classList.add("fade");
+        }
+    });
+});
+
+// Button Effect
+function surprise() {
+    alert("❤️ Happy Birthday My Love Gunalan ❤️\n\nI Love You Forever ❤️");
+}
