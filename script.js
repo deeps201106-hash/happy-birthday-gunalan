@@ -5,10 +5,6 @@ window.onload = function () {
     }, 1000);
 };
 
-// Surprise Button
-function surprise() {
-    alert("❤️ Happy Birthday My Love Gunalan ❤️\n\nMay all your dreams come true! 🎂🎉");
-}
 
 // Heart Effect
 setInterval(() => {
