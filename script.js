@@ -104,3 +104,10 @@ function animateFireworks() {
 
 setInterval(createFirework,1500);
 animateFireworks();
+function openLetter(){
+document.getElementById("letterPopup").style.display="block";
+}
+
+function closeLetter(){
+document.getElementById("letterPopup").style.display="none";
+}
