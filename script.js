@@ -1,7 +1,7 @@
 // Welcome Alert
 window.onload = function () {
     setTimeout(() => {
-        alert("🎉 Happy Birthday Gunalan ❤️");
+        alert("🎉 Happy Birthday Guna❤️");
     }, 1000);
 };
 
@@ -37,7 +37,7 @@ opacity:0;
 document.head.appendChild(style);
 // Welcome Message
 setTimeout(function () {
-    console.log("Happy Birthday Gunalan ❤️");
+    console.log("Happy Birthday Guna ❤️");
 }, 3000);
 
 // Auto Scroll Effect
@@ -56,7 +56,7 @@ window.addEventListener("scroll", () => {
 
 // Button Effect
 function surprise() {
-    alert("❤️ Happy Birthday My Love Gunalan ❤️\n\nI Love You Forever ❤️");
+    alert("❤️ Happy Birthday My Love Guna ❤️\n\nI Love You Forever ❤️");
 }
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
