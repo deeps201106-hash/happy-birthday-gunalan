@@ -111,3 +111,21 @@ document.getElementById("letterPopup").style.display="block";
 function closeLetter(){
 document.getElementById("letterPopup").style.display="none";
 }
+const reasons=[
+"❤️ onoda Cute Smile",
+"🥰 onoda Caring Heart",
+"😍 onoda Kindness",
+"💖 onoda Voice",
+"🌹 Nee ena purijikita vitham",
+"💞 Ne neeya eruka la athu enaku romba pudikum",
+"💕 Nee enakaga enna venalum seiva nu enaku thonuchu",
+"❤️ Unkuda erukurapa romba safe fa happy ya feel aagum"
+];
+
+function loveReason(){
+
+let random=Math.floor(Math.random()*reasons.length);
+
+document.getElementById("reasonText").innerHTML=reasons[random];
+
+}
