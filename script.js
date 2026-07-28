@@ -129,3 +129,8 @@ let random=Math.floor(Math.random()*reasons.length);
 document.getElementById("reasonText").innerHTML=reasons[random];
 
 }
+setTimeout(function(){
+
+alert("💖 Happy Birthday Gunalan 💖\n\nYou Will Always Be Special ❤️\n\nForever Yours,\nDeepa ❤️");
+
+},12000);
