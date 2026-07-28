@@ -131,6 +131,6 @@ document.getElementById("reasonText").innerHTML=reasons[random];
 }
 setTimeout(function(){
 
-alert("💖 Happy Birthday Gunalan 💖\n\nYou Will Always Be Special ❤️\n\nForever Yours,\nDeepa ❤️");
+alert("💖 Happy Birthday Guna 💖\n\nYou Will Always Be Special ❤️\n\nForever Yours,\nDeepa ❤️");
 
 },12000);
