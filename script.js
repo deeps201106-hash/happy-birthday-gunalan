@@ -56,9 +56,45 @@ window.addEventListener("scroll", () => {
 
 // Button Effect
 function surprise() {
-    alert("❤️ Happy Birthday My Love Guna ❤️\n\nI Love You Forever ❤️");
+    const screen = document.getElementById("loveScreen");
+    screen.style.display = "flex";
+
+    // Extra floating hearts
+    for(let i = 0; i < 25; i++){
+        setTimeout(() => {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "100vh";
+            heart.style.fontSize = (20 + Math.random()*30) + "px";
+            heart.style.zIndex = "10000";
+            heart.style.animation = "heartRise 4s linear forwards";
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 4000);
+        }, i * 120);
+    }
 }
 
+function closeLoveScreen(){
+    document.getElementById("loveScreen").style.display = "none";
+}
+
+// Heart rising animation
+const heartStyle = document.createElement("style");
+heartStyle.innerHTML = `
+@keyframes heartRise{
+    0%{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-120vh) scale(1.6);
+        opacity:0;
+    }
+}`;
+document.head.appendChild(heartStyle);
 function openLetter(){
 document.getElementById("letterPopup").style.display="block";
 }
