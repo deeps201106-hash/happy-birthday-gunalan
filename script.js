@@ -139,3 +139,50 @@ function loveReason() {
     const random = Math.floor(Math.random() * reasons.length);
     document.getElementById("reasonText").innerHTML = reasons[random];
 }
+/* Love Quiz */
+.quiz{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.quiz h2{
+    color:#ff4da6;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.quiz p{
+    color:white;
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.quiz-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.quiz-buttons button{
+    background:#ff4da6;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.quiz-buttons button:hover{
+    transform:scale(1.08);
+    background:#ff1493;
+}
+
+#quizResult{
+    color:#ffd6f0;
+    font-size:24px;
+    text-shadow:0 0 10px #ff4da6;
+    margin-top:25px;
+}
