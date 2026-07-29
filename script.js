@@ -89,5 +89,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 function loveReason() {
-    alert("❤️ Because You Are My Everything ❤️");
+    const reasons = [
+        "❤️ Un smile paatha odane enaku happy feel varum",
+        "🥰 Nee romba caring and lovable",
+        "💖 Un voice kekumbodhu calm ah feel aagum",
+        "🌹 Nee enna purinjukura vidham enaku romba special",
+        "💕 Un kuda irukum pothu naan romba safe ah feel panren",
+        "💞 Nee en life la vandhadhunaala dhaan life beautiful aayiduchu",
+        "❤️ Nee siricha naalum enaku full day happy",
+        "😘 Because nee dhaan en favourite person"
+    ];
+
+    const random = Math.floor(Math.random() * reasons.length);
+    document.getElementById("reasonText").innerHTML = reasons[random];
 }
