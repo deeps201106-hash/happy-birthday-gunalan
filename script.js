@@ -66,24 +66,28 @@ document.getElementById("letterPopup").style.display="block";
 function closeLetter(){
 document.getElementById("letterPopup").style.display="none";
 }
-const reasons=[
-"❤️ onoda Cute Smile",
-"🥰 onoda Caring Heart",
-"😍 onoda Kindness",
-"💖 onoda Voice",
-"🌹 Nee ena purijikita vitham",
-"💞 Ne neeya eruka la athu enaku romba pudikum",
-"💕 Nee enakaga enna venalum seiva nu enaku thonuchu",
-"❤️ Unkuda erukurapa romba safe fa happy ya feel aagum"
-];
+document.addEventListener("DOMContentLoaded", function () {
 
-function loveReason(){
+    const btn = document.getElementById("reasonBtn");
+    const text = document.getElementById("reasonText");
 
-let random=Math.floor(Math.random()*reasons.length);
+    const reasons = [
+        "❤️ Un smile enaku romba pudikum",
+        "🥰 Nee romba caring",
+        "💖 Un voice romba cute",
+        "💕 Nee enna purinjukura vidham",
+        "🌹 Un kuda irukum pothu happy ah feel aagum",
+        "❤️ Nee en life la romba special"
+    ];
 
-document.getElementById("reasonText").innerHTML=reasons[random];
+    if (btn && text) {
+        btn.addEventListener("click", function () {
+            const random = Math.floor(Math.random() * reasons.length);
+            text.innerHTML = reasons[random];
+        });
+    }
 
-}
+});
 function loveReason() {
     alert("❤️ Because You Are My Everything ❤️");
 }
