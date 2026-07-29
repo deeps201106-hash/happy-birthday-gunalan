@@ -139,50 +139,114 @@ function loveReason() {
     const random = Math.floor(Math.random() * reasons.length);
     document.getElementById("reasonText").innerHTML = reasons[random];
 }
-/* Love Quiz */
-.quiz{
-    text-align:center;
-    padding:60px 20px;
+const quiz = [
+  {
+    q: "Who is the cutest? 😘",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 0
+  },
+  {
+    q: "Who gets angry first? 😂",
+    options: ["Guna 😤", "Deepuu 😤"],
+    answer: 1
+  },
+  {
+    q: "Who says 'I miss you' more? 🥺",
+    options: ["Guna 💖", "Deepuu 💖"],
+    answer: 1
+  },
+  {
+    q: "Who is more caring? ❤️",
+    options: ["Guna 🤍", "Deepuu 🤍"],
+    answer: 0
+  },
+  {
+    q: "Who loves bike rides more? 🏍️",
+    options: ["Guna 🏍️", "Deepuu 🏍️"],
+    answer: 0
+  },
+  {
+    q: "Who is more stubborn? 😏",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  },
+  {
+    q: "Who is more emotional? 🥹",
+    options: ["Guna 💙", "Deepuu 💙"],
+    answer: 1
+  },
+  {
+    q: "Who gives the sweetest smile? 😊",
+    options: ["Guna ✨", "Deepuu ✨"],
+    answer: 0
+  },
+  {
+    q: "Who says 'sorry' first after a fight? 🥺",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  },
+  {
+    q: "Who gets jealous more? 😤💖",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  },
+  {
+    q: "Who is the bigger baby in this relationship? 👶",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 0
+  },
+  {
+    q: "Who loves hugs more? 🤗",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  },
+  {
+    q: "Who thinks about the other person all day? 💭",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  },
+  {
+    q: "Who is luckier in this relationship? 🍀",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 0
+  },
+  {
+    q: "Who loves whom more? 💖",
+    options: ["Guna ❤️", "Deepuu ❤️"],
+    answer: 1
+  }
+];
+
+let current = 0;
+
+function loadQuestion(){
+  document.getElementById("quizQuestion").innerHTML = quiz[current].q;
+  document.getElementById("option1").innerHTML = quiz[current].options[0];
+  document.getElementById("option2").innerHTML = quiz[current].options[1];
+  document.getElementById("quizResult").innerHTML = "";
 }
 
-.quiz h2{
-    color:#ff4da6;
-    font-size:36px;
-    margin-bottom:20px;
+function checkAnswer(choice){
+  const result = document.getElementById("quizResult");
+
+  if(choice === quiz[current].answer){
+      result.innerHTML = "💖 Correct! You know us so well! 😘";
+  }else{
+      result.innerHTML = "😂 Wrong! But I still love you forever ❤️";
+  }
+
+  setTimeout(() => {
+      current++;
+      if(current < quiz.length){
+          loadQuestion();
+      }else{
+          document.getElementById("quizQuestion").innerHTML = "🎉 Quiz Completed! 🎉";
+          document.getElementById("option1").style.display = "none";
+          document.getElementById("option2").style.display = "none";
+          document.getElementById("quizResult").innerHTML =
+          "🏆 Final Result: Guna scored 15/15 because he knows Deepuu very well! ❤️<br><br>But one thing is always true... Deepuu Loves Guna More Than Anything 💖😘 Forever and Ever!";
+      }
+  }, 1200);
 }
 
-.quiz p{
-    color:white;
-    font-size:22px;
-    margin-bottom:25px;
-}
-
-.quiz-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.quiz-buttons button{
-    background:#ff4da6;
-    color:white;
-    border:none;
-    padding:14px 28px;
-    border-radius:30px;
-    font-size:18px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.quiz-buttons button:hover{
-    transform:scale(1.08);
-    background:#ff1493;
-}
-
-#quizResult{
-    color:#ffd6f0;
-    font-size:24px;
-    text-shadow:0 0 10px #ff4da6;
-    margin-top:25px;
-}
+document.addEventListener("DOMContentLoaded", loadQuestion);
