@@ -84,8 +84,6 @@ let random=Math.floor(Math.random()*reasons.length);
 document.getElementById("reasonText").innerHTML=reasons[random];
 
 }
-setTimeout(function(){
-
-alert("💖 Happy Birthday Guna 💖\n\nYou Will Always Be Special ❤️\n\nForever Yours,\nDeepa ❤️");
-
-},12000);
+function loveReason() {
+    alert("❤️ Because You Are My Everything ❤️");
+}
