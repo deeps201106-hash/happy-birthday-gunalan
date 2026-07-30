@@ -243,9 +243,8 @@ if(choice === quiz[current].answer){
           document.getElementById("quizQuestion").innerHTML = "🎉 Quiz Completed! 🎉";
           document.getElementById("option1").style.display = "none";
           document.getElementById("option2").style.display = "none";
-         document.getElementById("quizResult").innerHTML =
-"🏆 Final Result: Guna scored " + score + "/15 because he knows deepuuu very well ❤️<br><br>But one thing is always true... Deepuu Loves Guna More Than Anything 💖😘 Forever and Ever!";
-      }
+        document.getElementById("quizResult").innerHTML =
+"🏆 Final Result: Guna scored " + score + "/15 ❤️<br><br>Congratulations My Guna 😘💖<br><br>But one thing is always true... Deepuu Loves Guna More Than Anything 💖😘 Forever and Ever!";    }
   }, 1200);
 }
 
