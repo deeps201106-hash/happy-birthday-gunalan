@@ -375,3 +375,41 @@ color:#ff1493;
     font-size:22px;
     margin:18px 0;
 }
+.memory-message {
+    max-width: 800px;
+    margin: 80px auto 40px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.memory-message h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffd6ec;
+}
+
+.memory-message p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f5f5f5;
+}
+
+.memory-message .highlight {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff9fcf;
+}
+
+.memory-message .signature {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ffffff;
+}
