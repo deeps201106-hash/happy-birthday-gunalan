@@ -249,3 +249,20 @@ if(choice === quiz[current].answer){
 }
 
 document.addEventListener("DOMContentLoaded", loadQuestion);
+function fillLoveMeter(){
+    const fill = document.getElementById("loveFill");
+    const text = document.getElementById("lovePercent");
+
+    let percent = 0;
+
+    const interval = setInterval(() => {
+        percent++;
+        fill.style.width = percent + "%";
+        text.innerHTML = percent + "%";
+
+        if(percent >= 100){
+            clearInterval(interval);
+            text.innerHTML = "Infinity ❤️";
+        }
+    }, 20);
+}
