@@ -218,7 +218,7 @@ const quiz = [
 ];
 
 let current = 0;
-
+let score = 0;
 function loadQuestion(){
   document.getElementById("quizQuestion").innerHTML = quiz[current].q;
   document.getElementById("option1").innerHTML = quiz[current].options[0];
@@ -229,12 +229,12 @@ function loadQuestion(){
 function checkAnswer(choice){
   const result = document.getElementById("quizResult");
 
-  if(choice === quiz[current].answer){
-      result.innerHTML = "💖 Correct! You know us so well! 😘";
-  }else{
-      result.innerHTML = "😂 Wrong! But I still love you forever ❤️";
-  }
-
+if(choice === quiz[current].answer){
+    score++;
+    result.innerHTML = "💖 Correct! You know us so well! 😘";
+}else{
+    result.innerHTML = "😂 Wrong! But I still love you forever ❤️";
+}
   setTimeout(() => {
       current++;
       if(current < quiz.length){
@@ -243,8 +243,8 @@ function checkAnswer(choice){
           document.getElementById("quizQuestion").innerHTML = "🎉 Quiz Completed! 🎉";
           document.getElementById("option1").style.display = "none";
           document.getElementById("option2").style.display = "none";
-          document.getElementById("quizResult").innerHTML =
-          "🏆 Final Result: Guna scored 15/15 because he knows Deepuu very well! ❤️<br><br>But one thing is always true... Deepuu Loves Guna More Than Anything 💖😘 Forever and Ever!";
+         document.getElementById("quizResult").innerHTML =
+"🏆 Final Result: Guna scored " + score + "/15 because he knows deepuuu very well ❤️<br><br>But one thing is always true... Deepuu Loves Guna More Than Anything 💖😘 Forever and Ever!";
       }
   }, 1200);
 }
